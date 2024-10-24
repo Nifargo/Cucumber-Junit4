@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Додайте JUnit 4
+    testImplementation 'junit:junit:4.13.2'
+
+    // Залиште Cucumber залежності
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.20.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.20.0'
+}
+
+// Немає потреби у використанні useJUnitPlatform() для JUnit 4
+test {
+    // Налаштування за замовчуванням
+}
